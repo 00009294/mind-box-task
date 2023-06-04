@@ -18,4 +18,15 @@
   <ItemGroup>
     <ProjectReference Include="..\MIndBoxTask.Test\MIndBoxTask.Test.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="MSSqlServer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MSSqlServer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="MSSqlServer.cs">
+      <DependentUpon>MSSqlServer.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
